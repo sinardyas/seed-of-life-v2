@@ -7,19 +7,25 @@ export default StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: HEADER.WIDTH,
-    height: HEADER.HEIGHT,
-    backgroundColor: Color.pomegranate,
-    justifyContent: 'space-between',
-    alignItems: 'center'
+    backgroundColor: Color.maroon,
+    alignItems: 'center',
+    paddingTop: 10
   },
   containerLeftMenu: {
-    height: HEADER.HEIGHT,
-    width: HEADER.HEIGHT,
+    justifyContent: 'center',
+    padding: 15
+  },
+  burgerMenu: {
+    fontSize: 30,
+    color: Color.white
+  },
+  titleWrapper: {
     justifyContent: 'center',
     alignItems: 'center'
   },
-  iconLeftMenu: {
-    fontSize: 26,
+  screenTitle: {
+    fontSize: 25,
+    fontWeight: 'bold',
     color: Color.white
   }
 });

@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import { createStackNavigator, createAppContainer, createDrawerNavigator, addNavigationHelpers } from 'react-navigation';
 
-import HomeScreen from '../screens/Home/Home.component';
-// import ItemDetailScreen from '../screens/ItemDetail/ItemDetail.component';
-// import ItemListScreen from '../screens/ItemList/ItemList.component';
-import Header from '../components/Header/Header.component';
+import HomeScreen from '../screens/Home/Home.container';
+import Header from '../components/NewHeader/NewHeader.container';
 
 const SideMenu = createDrawerNavigator(
   {
@@ -19,8 +17,7 @@ const HomeStack = createStackNavigator(
     Home: {
       screen: SideMenu,
       navigationOptions: ({ navigation }) => ({
-        title: 'Home',
-        header: props => <Header {...props} />
+        header: props => <Header {...props} title='Today Seed'/>
       })
     }
   },
