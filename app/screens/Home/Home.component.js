@@ -17,18 +17,24 @@ export default class Home extends Component {
   }
 
   render() {
-    const { title, body, verse, onRequestDashboard } = this.props;
+    const { data, loading } = this.props;
+    const { title, body, verse } = data;
     return (
-      <ScrollView refreshControl={<RefreshControl refreshing={onRequestDashboard} onRefresh={this._onRefresh}></RefreshControl>}>
+      <ScrollView refreshControl={<RefreshControl refreshing={loading} onRefresh={this._onRefresh}></RefreshControl>}>
         <View style={styles.titleWrapper}>
-        {title ? (<Text style={styles.title}>{title}</Text>) : <ActivityIndicator color={color.maroon}/>}
+        {loading ? (<ActivityIndicator color={color.maroon}/>) : (<Text style={styles.title}>{title}</Text>)}
         </View>
         <View style={styles.verseWrapper}>
-          {verse.body ? (<Text>{verse.body}</Text>) : <ActivityIndicator color={color.maroon}/>}
-          <Text>{verse.number}</Text>
+        {
+          loading ? (<ActivityIndicator color={color.maroon}/>) :
+          (<View>
+            <Text>{verse.body}</Text>
+            <Text style={styles.verseNumber}>{verse.number}</Text>
+          </View>)
+        }
         </View>
         <View style={styles.body}>
-          {body ? (<Html html={body}/>) : <ActivityIndicator color={color.maroon}/>}
+          {loading ? (<ActivityIndicator color={color.maroon}/>) : (<Html html={body}/>)}
         </View>
       </ScrollView>
     );

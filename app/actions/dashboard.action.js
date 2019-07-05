@@ -1,6 +1,6 @@
-import axios from './../utils/axios';
-import { dashboardApi } from './../utils/api';
-import { REQUEST_DASHBOARD, REQUEST_DASHBOARD_SUCCESS, REQUEST_DASHBOARD_FAILED } from './../utils/constant';
+import axios from '../utils/axios';
+import { dashboardApi } from '../utils/api';
+import { REQUEST_DASHBOARD, REQUEST_DASHBOARD_SUCCESS, REQUEST_DASHBOARD_FAILED } from '../utils/constant';
 
 const verseBuilder = (verse = []) => {
   let verseBodyBuilder = '';
@@ -38,6 +38,6 @@ export const getTodaySeed = ({ dispatch }) => {
       dispatch({ type: REQUEST_DASHBOARD_SUCCESS, payload });
     })
     .catch((error) => {
-      dispatch({ type: REQUEST_DASHBOARD_FAILED });
+      dispatch({ type: REQUEST_DASHBOARD_FAILED, error: error.message });
     });
 }

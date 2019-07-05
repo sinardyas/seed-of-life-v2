@@ -22,8 +22,5 @@ export default StyleSheet.create({
   },
   body: {
     padding: 16
-  },
-  verseNumber: {
-    fontWeight: 'bold'
-  }
+ }
 });

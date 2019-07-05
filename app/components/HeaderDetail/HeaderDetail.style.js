@@ -9,7 +9,7 @@ export default StyleSheet.create({
     width: HEADER.WIDTH,
     backgroundColor: Color.maroon,
     alignItems: 'center',
-    paddingTop: 10,
+    paddingTop: 10
   },
   containerLeftMenu: {
     justifyContent: 'center',

@@ -25,6 +25,7 @@ export default {
     outrageousOrange: '#FC5830',
     ripeLemon: '#F8E71C',
     maroon: '#800000',
-    gold: '#FFD700'
+    gold: '#FFD700',
+    maroonBlack: '#470101'
   };
   
