@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import color from './../../utils/color';
+import color from '../../utils/color';
 
 export default StyleSheet.create({
   container: {
@@ -70,14 +70,14 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  tabs: {
+  tab: {
     backgroundColor: color.maroon
   },
   tabText: {
     color: color.white,
     fontWeight: 'bold'
   },
-  tabsActive: {
+  tabActive: {
     backgroundColor: color.gold
   },
   tabActiveText: {

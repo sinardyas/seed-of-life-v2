@@ -1,6 +1,10 @@
 import axios from '../utils/axios';
-import { dashboardApi } from '../utils/api';
-import { REQUEST_DASHBOARD, REQUEST_DASHBOARD_SUCCESS, REQUEST_DASHBOARD_FAILED } from '../utils/constant';
+import { dashboardApi, devotionalListApi } from '../utils/api';
+import {
+  REQUEST_DASHBOARD,
+  REQUEST_DASHBOARD_SUCCESS,
+  REQUEST_DASHBOARD_FAILED
+} from '../utils/constant';
 
 const verseBuilder = (verse = []) => {
   let verseBodyBuilder = '';

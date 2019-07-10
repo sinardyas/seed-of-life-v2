@@ -2,12 +2,12 @@ import React from 'react';
 import { createStackNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation';
 
 import HomeScreen from '../screens/Home/Home.container';
-import ReflectionList from '../screens/Reflection/Reflection.container';
+import DevotionalList from '../screens/Devotional/Devotional.container';
 
 import Header from '../components/NewHeader/NewHeader.component';
 import HeaderDetail from '../components/HeaderDetail/HeaderDetail.container';
 import DrawerMenu from '../components/DrawerMenu/DrawerMenu.component';
-import ReflectionDetail from '../components/ReflectionDetail/ReflectionDetail.container';
+import DevotionalDetail from '../components/DevotionalDetail/DevotionalDetail.container';
 
 const HomeStack = createStackNavigator(
   {
@@ -23,16 +23,16 @@ const HomeStack = createStackNavigator(
   }
 );
 
-const ReflectionStack = createStackNavigator(
+const DevotionalStack = createStackNavigator(
   {
-    Reflection: {
-      screen: ReflectionList,
+    Devotional: {
+      screen: DevotionalList,
       navigationOptions: ({ navigation }) => ({
         header: props => <Header {...props}/>
       })
     },
-    ReflectionDetail: {
-      screen: ReflectionDetail,
+    DevotionalDetail: {
+      screen: DevotionalDetail,
       navigationOptions: ({ navigation }) => ({
         header: props => <HeaderDetail {...props} title={navigation.getParam('title')}/>
       })
@@ -46,7 +46,7 @@ const ReflectionStack = createStackNavigator(
 const SideMenu = createDrawerNavigator(
   {
     HomeStack,
-    ReflectionStack
+    DevotionalStack
   },
   {
     contentComponent: props => <DrawerMenu {...props}/>

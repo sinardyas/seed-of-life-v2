@@ -1,4 +1,5 @@
 const dashboardApi = '/api/today';
-const reflectionListApi = (month) => `/api/list/${month}`;
+const devotionalListPerMonthApi = (month) => `/api/list/${month}`;
+const devotionalListApi = '/api/list';
 
-export { dashboardApi, reflectionListApi };
+export { dashboardApi, devotionalListApi, devotionalListPerMonthApi };

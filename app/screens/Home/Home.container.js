@@ -2,6 +2,8 @@ import { connect } from 'react-redux';
 
 import Home from './Home.component';
 import { getTodaySeed } from './../../actions/dashboard.action';
+import { getDevotionalList } from './../../actions/devotional.action';
+
 
 const mapStateToProps = state => ({
   data: state.dashboard.data,
@@ -12,7 +14,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getTodaySeed: () => getTodaySeed({ dispatch })
+  getTodaySeed: () => getTodaySeed({ dispatch }),
+  getDevotionalList: () => getDevotionalList({ dispatch })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

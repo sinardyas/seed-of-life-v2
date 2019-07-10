@@ -7,8 +7,9 @@ import color from './../../utils/color';
 
 export default class Home extends Component {
   componentDidMount() {
-    const { getTodaySeed } = this.props;
+    const { getTodaySeed, getDevotionalList } = this.props;
     getTodaySeed();
+    getDevotionalList();
   }
 
   _onRefresh = () => {
