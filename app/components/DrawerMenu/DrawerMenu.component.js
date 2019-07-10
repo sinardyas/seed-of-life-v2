@@ -19,10 +19,10 @@ export default DrawerMenu = ({ navigation }) => {
         <Text style={styles.leftTitle}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={onPressitem('Reflection')}
+        onPress={onPressitem('Devotional')}
         style={styles.containerItem}
       >
-        <Text style={styles.leftTitle}>Reflection</Text>
+        <Text style={styles.leftTitle}>Devotional</Text>
       </TouchableOpacity>
     </View>
   );

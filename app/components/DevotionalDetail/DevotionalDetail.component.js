@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Text, View, ScrollView } from 'react-native';
 import Html from 'react-native-render-html';
 
-import styles from './ReflectionDetail.style';
+import styles from './DevotionalDetail.style';
 
-export default class ReflectionDetail extends Component {
+export default class DevotionalDetail extends Component {
   componentDidMount() {}
 
   verseBuilder = (verse = []) => {
