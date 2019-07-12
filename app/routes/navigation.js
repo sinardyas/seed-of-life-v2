@@ -8,6 +8,7 @@ import Header from '../components/NewHeader/NewHeader.component';
 import HeaderDetail from '../components/HeaderDetail/HeaderDetail.container';
 import DrawerMenu from '../components/DrawerMenu/DrawerMenu.component';
 import DevotionalDetail from '../components/DevotionalDetail/DevotionalDetail.container';
+import Setting from '../screens/Setting/Setting.container';
 
 const HomeStack = createStackNavigator(
   {
@@ -43,10 +44,25 @@ const DevotionalStack = createStackNavigator(
   }
 );
 
+const SettingStack = createStackNavigator(
+  {
+    Setting: {
+      screen: Setting,
+      navigationOptions: ({ navigation }) => ({
+        header: props => <Header {...props}/>
+      })
+    }
+  },
+  {
+    headerMode: 'float'
+  }
+)
+
 const SideMenu = createDrawerNavigator(
   {
     HomeStack,
-    DevotionalStack
+    DevotionalStack,
+    SettingStack
   },
   {
     contentComponent: props => <DrawerMenu {...props}/>

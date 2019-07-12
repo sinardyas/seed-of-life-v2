@@ -15,6 +15,8 @@ const REQUEST_DEVOTIONAL_LIST = 'REQUEST_DEVOTIONAL_LIST';
 const REQUEST_DEVOTIONAL_LIST_SUCCESS = 'REQUEST_DEVOTIONAL_LIST_SUCCESS';
 const REQUEST_DEVOTIONAL_LIST_FAILED = 'REQUEST_DEVOTIONAL_LIST_FAILED';
 
+const SET_FONT_SIZE = 'SET_FONT_SIZE';
+
 const listMonth = () => ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 export {
@@ -26,4 +28,5 @@ export {
   REQUEST_DEVOTIONAL_LIST,
   REQUEST_DEVOTIONAL_LIST_SUCCESS,
   REQUEST_DEVOTIONAL_LIST_FAILED,
+  SET_FONT_SIZE
 }

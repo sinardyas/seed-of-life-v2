@@ -4,7 +4,8 @@ import Color from './../../utils/color';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16
+    padding: 16,
+    flexDirection: 'column'
   },
   titleWrapper: {
     flex: 1,
@@ -22,10 +23,8 @@ export default StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold'
   },
-  body: {
-    padding: 16
-  },
-  verseNumber: {
-    fontWeight: 'bold'
+  settingWrapper: {
+    marginTop: 10,
+    margin: 5
   }
 });

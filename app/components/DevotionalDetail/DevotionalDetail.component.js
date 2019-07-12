@@ -28,6 +28,8 @@ export default class DevotionalDetail extends Component {
     const data = this.props.navigation.getParam('data');
     const { title, body, verse } = data;
     const verseParsed = this.verseBuilder(verse);
+    const { fontSize } = this.props.setting;
+
     return (
       <ScrollView>
         <View style={styles.titleWrapper}>
@@ -38,7 +40,7 @@ export default class DevotionalDetail extends Component {
           <Text>{verseParsed.number}</Text>
         </View>
         <View style={styles.body}>
-          <Html html={body}/>
+          <Html baseFontStyle={{ fontSize }} html={body}/>
         </View>
       </ScrollView>
     );

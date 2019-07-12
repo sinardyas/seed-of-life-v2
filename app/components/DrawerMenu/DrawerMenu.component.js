@@ -24,6 +24,12 @@ export default DrawerMenu = ({ navigation }) => {
       >
         <Text style={styles.leftTitle}>Devotional</Text>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={onPressitem('Setting')}
+        style={styles.containerItem}
+      >
+        <Text style={styles.leftTitle}>Setting</Text>
+      </TouchableOpacity>
     </View>
   );
 }
