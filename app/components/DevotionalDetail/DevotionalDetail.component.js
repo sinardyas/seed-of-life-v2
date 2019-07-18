@@ -3,6 +3,7 @@ import { Text, View, ScrollView } from 'react-native';
 import Html from 'react-native-render-html';
 
 import styles from './DevotionalDetail.style';
+import { font } from './../../utils/font';
 
 export default class DevotionalDetail extends Component {
   componentDidMount() {}
@@ -28,19 +29,19 @@ export default class DevotionalDetail extends Component {
     const data = this.props.navigation.getParam('data');
     const { title, body, verse } = data;
     const verseParsed = this.verseBuilder(verse);
-    const { fontSize } = this.props.setting;
+    const { fontSize, fontFamily } = this.props.setting;
 
     return (
       <ScrollView>
         <View style={styles.titleWrapper}>
-          <Text style={styles.title}>{title}</Text>
+          <Text style={{ fontSize: fontSize + 5, fontFamily, fontWeight: 'bold' }}>{title}</Text>
         </View>
         <View style={styles.verseWrapper}>
-          <Text>{verseParsed.body}</Text>
-          <Text>{verseParsed.number}</Text>
+          <Text style={{ fontSize, fontFamily }}>{verseParsed.body}</Text>
+          <Text style={{ fontSize, fontFamily, fontWeight: 'bold' }}>{verseParsed.number}</Text>
         </View>
         <View style={styles.body}>
-          <Html baseFontStyle={{ fontSize }} html={body}/>
+          <Html baseFontStyle={{ fontSize, fontFamily }} html={body}/>
         </View>
       </ScrollView>
     );

@@ -1,14 +1,19 @@
 import { connect } from 'react-redux';
 
 import Setting from './Setting.component';
-import { setFontSize } from './../../actions/setting.action';
+import { setFontSize, setFontFamily } from './../../actions/setting.action';
 
 
 const mapStateToProps = state => ({
+  setting: {
+    fontSize: state.setting.fontSize,
+    fontFamily: state.setting.fontFamily
+  }
 });
 
 const mapDispatchToProps = dispatch => ({
-  setFontSize: size => setFontSize({ dispatch, size })
+  setFontSize: size => setFontSize({ dispatch, size }),
+  setFontFamily: font => setFontFamily({ dispatch, font })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Setting);

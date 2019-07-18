@@ -42,6 +42,9 @@ export const getTodaySeed = ({ dispatch }) => {
       dispatch({ type: REQUEST_DASHBOARD_SUCCESS, payload });
     })
     .catch((error) => {
-      dispatch({ type: REQUEST_DASHBOARD_FAILED, error: error.message });
+      dispatch({
+        type: REQUEST_DASHBOARD_FAILED,
+        error: error.message
+      });
     });
 }

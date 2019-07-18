@@ -14,6 +14,6 @@ export default class App extends Component {
       <Provider store={store}>
         <AppNavigator />
       </Provider>
-  );
+    );
   }
 }

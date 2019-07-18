@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   View,
   TouchableOpacity,
-  DatePickerIOS,
   Text
 } from 'react-native';
 import { Icon } from 'native-base';
 import { DrawerActions } from 'react-navigation';
 
 import styles from './NewHeader.style';
-import moment from 'moment';
 
 const Header = ({ navigation, title }) => {
   toggleDrawer = () => () => {

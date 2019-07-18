@@ -14,7 +14,9 @@ export default StyleSheet.create({
   },
   verseWrapper: {
     backgroundColor: Color.gold,
-    padding: 10
+    padding: 10,
+    margin: 6,
+    borderRadius: 10
   },
   title: {
     fontSize: 20,

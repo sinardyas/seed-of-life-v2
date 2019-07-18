@@ -1,5 +1,5 @@
 import React from 'react';
-import { createStackNavigator, createAppContainer, createDrawerNavigator } from 'react-navigation';
+import { createStackNavigator, createAppContainer, createDrawerNavigator, createSwitchNavigator } from 'react-navigation';
 
 import HomeScreen from '../screens/Home/Home.container';
 import DevotionalList from '../screens/Devotional/Devotional.container';
@@ -9,6 +9,7 @@ import HeaderDetail from '../components/HeaderDetail/HeaderDetail.container';
 import DrawerMenu from '../components/DrawerMenu/DrawerMenu.component';
 import DevotionalDetail from '../components/DevotionalDetail/DevotionalDetail.container';
 import Setting from '../screens/Setting/Setting.container';
+import Splash from '../screens/Splash/Splash.container';
 
 const HomeStack = createStackNavigator(
   {
@@ -81,6 +82,24 @@ const AppStack = createStackNavigator(
   }
 );
 
-const AppNavigator = createAppContainer(AppStack);
+const SplashStack = createStackNavigator(
+  {
+    Splash: {
+      screen: Splash
+    }
+  },
+  {
+    headerMode: 'none'
+  }
+)
+
+const RootNavigation = createSwitchNavigator(
+  {
+    SplashStack,
+    AppStack
+  }
+)
+
+const AppNavigator = createAppContainer(RootNavigation);
 
 export default AppNavigator;

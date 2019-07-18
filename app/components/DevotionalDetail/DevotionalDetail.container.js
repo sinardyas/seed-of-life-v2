@@ -6,12 +6,12 @@ import { setFontSize } from './../../actions/setting.action';
 
 const mapStateToProps = state => ({
   setting: {
-    fontSize: state.setting.fontSize
+    fontSize: state.setting.fontSize,
+    fontFamily: state.setting.fontFamily
   }
 });
 
 const mapDispatchToProps = dispatch => ({
-  setFontSize: size => setFontSize({ dispatch, size })
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DevotionalDetail);
